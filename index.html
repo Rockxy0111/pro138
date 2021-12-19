@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+
+<body>
+  <a-scene background="color:gray">
+
+    <a-camera wasd-controls-enabled="true" position="0 8 20"></a-camera>
+
+    <a-assets>      
+
+    <a-assets-item id='street' src='./models/street/scene.gltf'></a-assets-item>
+    <a-assets-item id='girl' src='./models/girl/scene.gltf'></a-assets-item>
+    <a-assets-item id='bench' src='./models/bench/scene.gltf'></a-assets-item>
+    <a-assets-item id='cat' src='./models/cat/scene.gltf'></a-assets-item>
+
+
+    </a-assets>
+    
+    
+    <a-entity light="type: point; castShadow: true; color:#e6ca14"
+    position="0 20 18"></a-entity>
+
+    <a-entity light="type: ambient; intensity: 1;">
+    </a-entity>
+
+    
+    
+    <a-entity>
+      <a-entity position="-20 2 -12" rotation="0 0 0" scale="0.02 0.02 0.02" gltf-model="#street" shadow="cast: true;">
+      </a-entity>
+    </a-entity>
+
+    <a-entity>
+      <a-entity position="0 2 8" rotation="0 0 0" scale="4 4 4" gltf-model="#girl" shadow="cast: true;">
+      </a-entity>
+    </a-entity>
+
+    <a-entity>
+      <a-entity position="-6 3 12" rotation="0 0 0" scale="1 1 1" gltf-model="#bench" shadow="cast: true;">
+      </a-entity>
+    </a-entity>
+ 
+    
+    
+  </a-scene>
+</body>
+
+</html>
